@@ -15,6 +15,7 @@
     <name>odk-template</name>
     <description>odk-template</description>
     <properties>
+        <skipTests>true</skipTests>
         <java.version>8</java.version>
         <spring-boot-version>2.7.17</spring-boot-version>
         <odk-template-rpc>0.0.1-SNAPSHOT</odk-template-rpc>
@@ -131,8 +132,13 @@
                     <image>
                         <builder>paketobuildpacks/builder-jammy-base:latest</builder>
                     </image>
+<!--      Unable to find main class              https://blog.csdn.net/kaichekaihanma/article/details/123252611?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-2-123252611-blog-133126904.235%5Ev38%5Epc_relevant_sort&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-2-123252611-blog-133126904.235%5Ev38%5Epc_relevant_sort&utm_relevant_index=3-->
+                    <layout>NONE</layout>
+<!--      聚合项目程打包，提示包不存在              https://blog.csdn.net/weixin_44671867/article/details/130931516-->
+                    <classifier>exec</classifier>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 

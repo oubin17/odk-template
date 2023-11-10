@@ -1,8 +1,8 @@
 package com.odk.odktemplateweb;
 
+import com.odk.base.dto.response.ServiceResponse;
 import com.odk.odktemplateapi.HelloWorldApi;
 import com.odk.odktemplateweb.request.HelloWorldRequest;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,13 +19,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloWorldController {
 
-    @Autowired
-    private HelloWorldApi helloWorldTemplate;
 
+    private final HelloWorldApi helloWorldApi;
 
+    public HelloWorldController(HelloWorldApi helloWorldApi) {
+        this.helloWorldApi = helloWorldApi;
+    }
 
     @PostMapping
-    public String helloWorld(@RequestBody HelloWorldRequest helloWorldRequest) {
-        return helloWorldTemplate.helloWorld();
+    public ServiceResponse<String> helloWorld(@RequestBody HelloWorldRequest helloWorldRequest) {
+        return ServiceResponse.valueOfSuccess(helloWorldApi.helloWorld());
     }
 }
