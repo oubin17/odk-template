@@ -33,10 +33,33 @@
         <dependency>
             <groupId>com.odk</groupId>
             <artifactId>odk-template-web</artifactId>
-            <version>${odk-template-web}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.odk</groupId>
+            <artifactId>odk-template-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.odk</groupId>
+            <artifactId>odk-template-service</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.odk</groupId>
+            <artifactId>odk-template-manager</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.odk</groupId>
+            <artifactId>odk-template-domain</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.odk</groupId>
+            <artifactId>odk-template-infrastructure</artifactId>
         </dependency>
 
     </dependencies>
-
 
 </project>
