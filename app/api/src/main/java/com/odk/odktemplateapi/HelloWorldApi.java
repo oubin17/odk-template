@@ -1,5 +1,9 @@
 package com.odk.odktemplateapi;
 
+import com.odk.base.dto.response.ServiceResponse;
+import com.odk.odktemplateutil.request.HelloWorldRequest;
+import com.odk.odktemplateutil.response.HelloWorldResponse;
+
 /**
  * HelloWorldTemplate
  *
@@ -9,6 +13,6 @@ package com.odk.odktemplateapi;
  */
 public interface HelloWorldApi {
 
-    public String helloWorld();
+    public ServiceResponse<HelloWorldResponse> helloWorld(HelloWorldRequest helloWorldRequest);
 
 }

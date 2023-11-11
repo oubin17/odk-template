@@ -29,6 +29,16 @@
             <artifactId>odk-template-domain</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.odk</groupId>
+            <artifactId>odk-template-util</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.odk</groupId>
+            <artifactId>odk-common-util-base</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>

@@ -2,7 +2,8 @@ package com.odk.odktemplateweb;
 
 import com.odk.base.dto.response.ServiceResponse;
 import com.odk.odktemplateapi.HelloWorldApi;
-import com.odk.odktemplateweb.request.HelloWorldRequest;
+import com.odk.odktemplateutil.request.HelloWorldRequest;
+import com.odk.odktemplateutil.response.HelloWorldResponse;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +28,7 @@ public class HelloWorldController {
     }
 
     @PostMapping
-    public ServiceResponse<String> helloWorld(@RequestBody HelloWorldRequest helloWorldRequest) {
-        return ServiceResponse.valueOfSuccess(helloWorldApi.helloWorld());
+    public ServiceResponse<HelloWorldResponse> helloWorld(@RequestBody HelloWorldRequest helloWorldRequest) {
+        return helloWorldApi.helloWorld(helloWorldRequest);
     }
 }

@@ -1,7 +1,9 @@
 package com.odk.odktemplateservice.impl;
 
+import com.odk.base.dto.response.ServiceResponse;
 import com.odk.odktemplatemanager.HelloWorldManager;
 import com.odk.odktemplateservice.HelloWorldService;
+import com.odk.odktemplateutil.dto.HelloWorldDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +21,8 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     private HelloWorldManager helloWorldManager;
 
     @Override
-    public String helloWorld() {
-        return helloWorldManager.helloWorld();
+    public ServiceResponse<HelloWorldDto> helloWorld(HelloWorldDto dto) {
+        dto.setName("Hello World: " + dto.getName());
+        return ServiceResponse.valueOfSuccess(dto);
     }
 }

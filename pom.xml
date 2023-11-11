@@ -26,6 +26,7 @@
         <odk-template-domain>0.0.1-SNAPSHOT</odk-template-domain>
         <odk-template-infrastructure>0.0.1-SNAPSHOT</odk-template-infrastructure>
         <odk-template-bootstrap>0.0.1-SNAPSHOT</odk-template-bootstrap>
+        <odk-template-util>0.0.1-SNAPSHOT</odk-template-util>
 
         <odk-common-util-base>1.0-SNAPSHOT</odk-common-util-base>
     </properties>
@@ -38,6 +39,7 @@
         <module>core/manager</module>
         <module>common/domain</module>
         <module>common/infrastructure</module>
+        <module>common/odk-template-util</module>
         <module>odk-template-bootstrap</module>
     </modules>
 
@@ -49,6 +51,7 @@
                 <version>${spring-boot-version}</version>
             </dependency>
 
+<!--            模块包-->
             <dependency>
                 <groupId>com.odk</groupId>
                 <artifactId>odk-template-rpc</artifactId>
@@ -89,6 +92,19 @@
                 <groupId>com.odk</groupId>
                 <artifactId>odk-template-infrastructure</artifactId>
                 <version>${odk-template-infrastructure}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.odk</groupId>
+                <artifactId>odk-template-util</artifactId>
+                <version>${odk-template-util}</version>
+            </dependency>
+            
+            <!--            系统工具包-->
+            <dependency>
+                <groupId>com.odk</groupId>
+                <artifactId>odk-common-util-base</artifactId>
+                <version>${odk-common-util-base}</version>
             </dependency>
 
         </dependencies>

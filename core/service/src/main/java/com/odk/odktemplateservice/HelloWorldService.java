@@ -1,5 +1,8 @@
 package com.odk.odktemplateservice;
 
+import com.odk.base.dto.response.ServiceResponse;
+import com.odk.odktemplateutil.dto.HelloWorldDto;
+
 /**
  * HelloWorldService
  *
@@ -9,5 +12,5 @@ package com.odk.odktemplateservice;
  */
 public interface HelloWorldService {
 
-    String helloWorld();
+    ServiceResponse<HelloWorldDto> helloWorld(HelloWorldDto dto);
 }

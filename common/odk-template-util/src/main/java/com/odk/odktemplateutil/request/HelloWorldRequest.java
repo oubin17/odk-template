@@ -1,4 +1,4 @@
-package com.odk.odktemplateweb.request;
+package com.odk.odktemplateutil.request;
 
 import com.odk.base.dto.request.BaseRequest;
 

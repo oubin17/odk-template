@@ -23,12 +23,6 @@
 
         <dependency>
             <groupId>com.odk</groupId>
-            <artifactId>odk-common-util-base</artifactId>
-            <version>${odk-common-util-base}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.odk</groupId>
             <artifactId>odk-template-api</artifactId>
         </dependency>
 
