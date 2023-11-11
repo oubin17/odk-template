@@ -1,6 +1,6 @@
 package com.odk.odktemplateservice;
 
-import com.odk.base.dto.response.ServiceResponse;
+import com.odk.base.vo.response.ServiceResponse;
 import com.odk.odktemplateutil.dto.HelloWorldDto;
 
 /**

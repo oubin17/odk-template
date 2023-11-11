@@ -29,6 +29,8 @@
         <odk-template-util>0.0.1-SNAPSHOT</odk-template-util>
 
         <odk-common-util-base>1.0-SNAPSHOT</odk-common-util-base>
+
+        <lombok>1.18.24</lombok>
     </properties>
 
     <modules>
@@ -39,7 +41,7 @@
         <module>core/manager</module>
         <module>common/domain</module>
         <module>common/infrastructure</module>
-        <module>common/odk-template-util</module>
+        <module>common/util</module>
         <module>odk-template-bootstrap</module>
     </modules>
 
@@ -106,6 +108,16 @@
                 <artifactId>odk-common-util-base</artifactId>
                 <version>${odk-common-util-base}</version>
             </dependency>
+
+<!--            开发工具包-->
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok}</version>
+                <scope>provided</scope>
+            </dependency>
+
 
         </dependencies>
 

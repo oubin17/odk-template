@@ -1,9 +1,9 @@
 package com.odk.odktemplateapi.impl;
 
-import com.odk.base.dto.request.BaseRequest;
-import com.odk.base.dto.response.ServiceResponse;
 import com.odk.base.exception.AssertUtil;
 import com.odk.base.exception.BizErrorCode;
+import com.odk.base.vo.request.BaseRequest;
+import com.odk.base.vo.response.ServiceResponse;
 import com.odk.odktemplateapi.HelloWorldApi;
 import com.odk.odktemplateapi.api.AbstractApiImpl;
 import com.odk.odktemplateservice.HelloWorldService;

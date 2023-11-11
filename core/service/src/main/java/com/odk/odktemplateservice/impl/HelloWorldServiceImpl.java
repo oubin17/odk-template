@@ -1,6 +1,6 @@
 package com.odk.odktemplateservice.impl;
 
-import com.odk.base.dto.response.ServiceResponse;
+import com.odk.base.vo.response.ServiceResponse;
 import com.odk.odktemplatemanager.HelloWorldManager;
 import com.odk.odktemplateservice.HelloWorldService;
 import com.odk.odktemplateutil.dto.HelloWorldDto;

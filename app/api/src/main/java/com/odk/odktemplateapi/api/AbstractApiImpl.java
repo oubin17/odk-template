@@ -1,11 +1,12 @@
 package com.odk.odktemplateapi.api;
 
-import com.odk.base.dto.request.BaseRequest;
-import com.odk.base.dto.response.BaseResponse;
-import com.odk.base.dto.response.ServiceResponse;
+import com.odk.base.dto.DTO;
 import com.odk.base.exception.AssertUtil;
 import com.odk.base.exception.BizErrorCode;
 import com.odk.base.exception.BizException;
+import com.odk.base.vo.request.BaseRequest;
+import com.odk.base.vo.response.BaseResponse;
+import com.odk.base.vo.response.ServiceResponse;
 import com.odk.odktemplateutil.constext.ServiceContextHolder;
 import com.odk.odktemplateutil.enums.BizScene;
 import org.apache.commons.lang3.StringUtils;
@@ -32,7 +33,19 @@ public class AbstractApiImpl extends AbstractApi {
 
     private static final String NULL_REPLACE = "-";
 
-    protected <T, R> ServiceResponse<R> bizProcess(BizScene bizScene, BaseRequest request, Class<R> resultClazz, ApiCallBack<T, R> callBack) {
+    /**
+     * 通用服务处理模板
+     * 1.规定入参出参需要满足的条件；
+     * 2.规定对象在service层和controller层的不同父类；
+     * @param bizScene
+     * @param request
+     * @param resultClazz
+     * @param callBack
+     * @return
+     * @param <T>
+     * @param <R>
+     */
+    protected <T extends DTO, R> ServiceResponse<R> bizProcess(BizScene bizScene, BaseRequest request, Class<R> resultClazz, ApiCallBack<T, R> callBack) {
         long startTime = System.currentTimeMillis();
         ServiceResponse<R> response = null;
         try {
@@ -86,14 +99,12 @@ public class AbstractApiImpl extends AbstractApi {
         }
 
         /**
-         * 参数转换：request -> dto
+         * 参数转换：VO -> DTO
          *
          * @param request
          * @return
          */
-        protected Object convert(BaseRequest request) {
-            return new Object();
-        }
+        protected abstract Object convert(BaseRequest request);
 
         /**
          * 核心业务处理
@@ -104,7 +115,7 @@ public class AbstractApiImpl extends AbstractApi {
         protected abstract ServiceResponse<T> doProcess(Object args);
 
         /**
-         * 将服务层返回的对象转成controller层返回的对象
+         * 将服务层返回的对象转成controller层返回的对象:DTO -> VO
          *
          * @param apiResult
          * @param resultClazz
@@ -151,7 +162,6 @@ public class AbstractApiImpl extends AbstractApi {
      */
     private ServiceResponse handleBizException(BizException bizEx) {
         LOGGER.error("biz exception occurred，error code: {}，error message: {}", bizEx.getErrorCode(), bizEx.getMessage());
-
         return generateBaseResult(bizEx);
     }
 

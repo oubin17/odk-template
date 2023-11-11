@@ -1,6 +1,6 @@
 package com.odk.odktemplateapi;
 
-import com.odk.base.dto.response.ServiceResponse;
+import com.odk.base.vo.response.ServiceResponse;
 import com.odk.odktemplateutil.request.HelloWorldRequest;
 import com.odk.odktemplateutil.response.HelloWorldResponse;
 
