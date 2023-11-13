@@ -48,11 +48,12 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-                <version>${spring-boot-version}</version>
-            </dependency>
+<!--            spring框架-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter</artifactId>-->
+<!--                <version>${spring-boot-version}</version>-->
+<!--            </dependency>-->
 
 <!--            模块包-->
             <dependency>
@@ -143,10 +144,7 @@
             <version>2.0</version>
         </dependency>
 
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.boot</groupId>-->
-        <!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
-        <!--        </dependency>-->
+
 
 
         <!--        <dependency>-->
