@@ -31,6 +31,7 @@
         <odk-common-util-base>1.0-SNAPSHOT</odk-common-util-base>
 
         <lombok>1.18.24</lombok>
+        <database-spring-boot-starter>0.0.1-SNAPSHOT</database-spring-boot-starter>
     </properties>
 
     <modules>
@@ -42,7 +43,7 @@
         <module>common/domain</module>
         <module>common/infrastructure</module>
         <module>common/util</module>
-        <module>odk-template-bootstrap</module>
+        <module>bootstrap</module>
     </modules>
 
     <dependencyManagement>
@@ -118,6 +119,11 @@
                 <scope>provided</scope>
             </dependency>
 
+            <dependency>
+                <groupId>com.odk</groupId>
+                <artifactId>database-spring-boot-starter</artifactId>
+                <version>${database-spring-boot-starter}</version>
+            </dependency>
 
         </dependencies>
 

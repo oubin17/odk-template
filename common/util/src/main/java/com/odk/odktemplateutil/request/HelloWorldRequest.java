@@ -3,6 +3,7 @@ package com.odk.odktemplateutil.request;
 
 import com.odk.base.vo.request.BaseRequest;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * HelloWorldRequest
@@ -11,6 +12,7 @@ import lombok.Data;
  * @version: 1.0
  * @author: oubin on 2023/11/10
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class HelloWorldRequest extends BaseRequest {
 
