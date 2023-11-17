@@ -25,6 +25,7 @@ import java.util.Objects;
 public class AbstractApiImpl extends AbstractApi {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AbstractApiImpl.class);
+//    private static Logger LOGGER = LoggerFactory.getLogger("SERVICE-DIGEST-APPENDER");
 
     /**
      * summary log
