@@ -204,7 +204,7 @@ public class AbstractApiImpl extends AbstractApi {
      * @return
      */
     private ServiceResponse handleSystemException(Throwable e) {
-        LOGGER.error("unknown exception occurred, error message: {}", e.getMessage());
+        LOGGER.error("unknown exception occurred, error message: ", e);
         return generateBaseResult(e);
     }
 
