@@ -50,12 +50,6 @@
 
     <dependencyManagement>
         <dependencies>
-<!--            spring框架-->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-starter</artifactId>-->
-<!--                <version>${spring-boot-version}</version>-->
-<!--            </dependency>-->
 
 <!--            模块包-->
             <dependency>
@@ -113,19 +107,19 @@
                 <version>${odk-common-util-base}</version>
             </dependency>
 
-<!--            开发工具包-->
+            <dependency>
+                <groupId>com.odk</groupId>
+                <artifactId>database-spring-boot-starter</artifactId>
+                <version>${database-spring-boot-starter}</version>
+            </dependency>
+
+            <!--            开发工具包-->
             <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok}</version>
                 <scope>provided</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>com.odk</groupId>
-                <artifactId>database-spring-boot-starter</artifactId>
-                <version>${database-spring-boot-starter}</version>
             </dependency>
 
             <dependency>
