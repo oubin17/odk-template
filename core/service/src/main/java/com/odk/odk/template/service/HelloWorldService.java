@@ -12,5 +12,5 @@ import com.odk.odktemplateutil.dto.HelloWorldDto;
  */
 public interface HelloWorldService {
 
-    HelloWorldDto helloWorld(HelloWorldDto dto);
+    String helloWorld(HelloWorldDto dto);
 }

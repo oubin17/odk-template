@@ -31,7 +31,7 @@ public class HelloWorldApiImpl extends AbstractApiImpl implements HelloWorldApi 
 
     @Override
     public ServiceResponse<HelloWorldResponse> helloWorld(HelloWorldRequest helloWorldRequest) {
-        return super.bizProcess(BizScene.HELLO_WORLD, helloWorldRequest, HelloWorldResponse.class, new ApiCallBack<HelloWorldDto, HelloWorldResponse>() {
+        return super.bizProcess(BizScene.HELLO_WORLD, helloWorldRequest, HelloWorldResponse.class, new ApiCallBack<String, HelloWorldResponse>() {
             @Override
             protected void checkParams(BaseRequest request) {
                 super.checkParams(request);
@@ -48,16 +48,16 @@ public class HelloWorldApiImpl extends AbstractApiImpl implements HelloWorldApi 
             }
 
             @Override
-            protected HelloWorldDto doProcess(Object args) {
+            protected String doProcess(Object args) {
                 HelloWorldDto dto = (HelloWorldDto) args;
                 return helloWorldService.helloWorld(dto);
             }
 
             @Override
-            protected ServiceResponse<HelloWorldResponse> assembleResult(HelloWorldDto apiResult, Class<HelloWorldResponse> resultClazz) throws Throwable {
+            protected ServiceResponse<HelloWorldResponse> assembleResult(String apiResult, Class<HelloWorldResponse> resultClazz) throws Throwable {
                 ServiceResponse<HelloWorldResponse> helloWorldResponseServiceResponse = super.assembleResult(apiResult, resultClazz);
                 HelloWorldResponse response = new HelloWorldResponse();
-                response.setResult(apiResult.getName());
+                response.setResult(apiResult);
                 helloWorldResponseServiceResponse.setData(response);
                 return helloWorldResponseServiceResponse;
 

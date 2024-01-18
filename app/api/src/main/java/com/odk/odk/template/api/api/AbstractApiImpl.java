@@ -79,7 +79,7 @@ public class AbstractApiImpl extends AbstractApi {
      * @param <R>
      * @return
      */
-    protected <T extends DTO, R> ServiceResponse<R> bizProcess(BizScene bizScene, BaseRequest request, Class<R> resultClazz, ApiCallBack<T, R> callBack) {
+    protected <T, R> ServiceResponse<R> bizProcess(BizScene bizScene, BaseRequest request, Class<R> resultClazz, ApiCallBack<T, R> callBack) {
         long startTime = System.currentTimeMillis();
         ServiceResponse<R> response = null;
         try {
@@ -222,7 +222,7 @@ public class AbstractApiImpl extends AbstractApi {
         try {
             return ServiceResponse.valueOfError(
                     Objects.requireNonNull(errorCode).getErrorType(),
-                    Objects.requireNonNull(errorCode).getCode(),
+                    Objects.requireNonNull(errorCode).getErrorCode(),
                     errorMsg == null ? errorCode.getErrorContext() : errorMsg);
         } catch (Throwable t) {
             LOGGER.error("new system exception occurred, error message: {}", t.getMessage());
