@@ -28,11 +28,11 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     private UserRepository userRepository;
 
     @Override
-    public ServiceResponse<HelloWorldDto> helloWorld(HelloWorldDto dto) {
+    public HelloWorldDto helloWorld(HelloWorldDto dto) {
         User one;
         one = userRepository.findOne(Integer.valueOf(dto.getName()));
         AssertUtil.notNull(one, BizErrorCode.PARAM_ILLEGAL, "参数非法");
         dto.setName("Hello World: " + one.getName());
-        return ServiceResponse.valueOfSuccess(dto);
+        return dto;
     }
 }

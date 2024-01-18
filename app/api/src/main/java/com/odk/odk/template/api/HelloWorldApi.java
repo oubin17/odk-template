@@ -13,6 +13,6 @@ import com.odk.odktemplateutil.response.HelloWorldResponse;
  */
 public interface HelloWorldApi {
 
-    public ServiceResponse<HelloWorldResponse> helloWorld(HelloWorldRequest helloWorldRequest);
+    ServiceResponse<HelloWorldResponse> helloWorld(HelloWorldRequest helloWorldRequest);
 
 }
