@@ -2,8 +2,7 @@ package com.odk.odk.template.service.impl;
 
 import com.odk.base.exception.AssertUtil;
 import com.odk.base.exception.BizErrorCode;
-import com.odk.base.vo.response.ServiceResponse;
-import com.odk.odk.template.domain.domain.User;
+import com.odk.odk.template.domain.domain.UserBase;
 import com.odk.odk.template.domain.impl.UserRepository;
 import com.odk.odk.template.manager.HelloWorldManager;
 import com.odk.odk.template.service.HelloWorldService;
@@ -22,17 +21,14 @@ import org.springframework.stereotype.Service;
 public class HelloWorldServiceImpl implements HelloWorldService {
 
     @Autowired
-    private HelloWorldManager helloWorldManager;
-
-    @Autowired
     private UserRepository userRepository;
 
     @Override
     public String helloWorld(HelloWorldDto dto) {
-        User one;
+        UserBase one;
         one = userRepository.findOne(Integer.valueOf(dto.getName()));
         AssertUtil.notNull(one, BizErrorCode.PARAM_ILLEGAL, "参数非法");
-        dto.setName("Hello World: " + one.getName());
+        dto.setName("Hello World: " + one.getUserName());
         return dto.getName();
     }
 }

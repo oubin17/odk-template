@@ -8,8 +8,12 @@ package com.odk.odktemplateutil.enums;
  * @author: oubin on 2023/11/11
  */
 public enum BizScene {
-    HELLO_WORLD("HELLO_WORLD", "HELLO_WORLD")
+    HELLO_WORLD("HELLO_WORLD", "HELLO_WORLD"),
 
+
+    USER_REGISTER("USER_REGISTER", "用户注册"),
+
+    USER_LOGIN("USER_LOGIN", "用户登录"),
     ;
 
 

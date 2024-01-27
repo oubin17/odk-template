@@ -1,4 +1,4 @@
-package com.odk.odk.template.api.api;
+package com.odk.odk.template.api.template;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

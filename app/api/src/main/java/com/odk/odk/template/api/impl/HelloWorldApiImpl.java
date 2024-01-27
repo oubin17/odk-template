@@ -5,7 +5,7 @@ import com.odk.base.exception.BizErrorCode;
 import com.odk.base.vo.request.BaseRequest;
 import com.odk.base.vo.response.ServiceResponse;
 import com.odk.odk.template.api.HelloWorldApi;
-import com.odk.odk.template.api.api.AbstractApiImpl;
+import com.odk.odk.template.api.template.AbstractApiImpl;
 import com.odk.odk.template.service.HelloWorldService;
 import com.odk.odktemplateutil.dto.HelloWorldDto;
 import com.odk.odktemplateutil.enums.BizScene;
